@@ -1,2 +1,154 @@
-# migration-seeder-factory-cli
-Effortlessly manage migrations, seeders, and factories for PostgreSQL, MySQL, and MongoDB
+# Migration, Seeder and Factory Creator
+
+This package provides an easy way to generate migrations, seeders, and factories using built-in commands in Node.js. Developed by **Dohrnyx**, this tool streamlines database management for your applications.
+
+## Note: MongoDB functionality will be available soon. Meanwhile, all features for MySQL and PostgreSQL are fully functional and ready to use.
+
+For more information - how to use, check this article - **Dohrnyx Medium** at [Migration, Seeder and Factory Creator In Nodejs](https://medium.com/@dohrnyx.social/migration-seeder-and-factory-creator-in-nodejs-07669929023a).
+
+## Features
+- Generate migrations, seeders, and factories effortlessly
+- Simple CLI commands for quick setup
+- Compatible with Node.js version v18.20.7 and later.
+- Supports PostgreSQL, MySQL
+
+## Installation
+```sh
+npm install migration-seeder-factory
+```
+
+## How to Use After Installation
+
+
+## Usage
+Run the following commands to create respective database assets:
+
+## Note
+`--db=` - Not required. If you want, you can set the default database via your `.env` variable: **`DEFAULT_DB_TYPE`**.
+
+
+### Commands
+
+#### Create a Migration:
+For MySQL:
+```sh
+npx nexxt make:migration create_sites_table --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt make:migration create_sites_table --db=postgres
+```
+
+
+#### Run Migrations:
+For MySQL:
+```sh
+npx nexxt migrate --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt migrate --db=postgres
+```
+
+#### Run Specific Migration File:
+For MySQL:
+```sh
+npx nexxt migrate create_sites_table --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt migrate create_sites_table --db=postgres
+```
+
+
+#### Rollback Migrations:
+For MySQL:
+```sh
+npx nexxt migrate:rollback --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt migrate:rollback --db=postgres
+```
+
+#### Rollback Specific Migrations File:
+For MySQL:
+```sh
+npx nexxt migrate:rollback create_sites_table --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt migrate:rollback create_sites_table --db=postgres
+```
+
+
+#### Create a Seeder:
+For MySQL:
+```sh
+npx nexxt make:seeder sites_seeder --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt make:seeder sites_seeder --db=postgres
+```
+
+
+#### Create Factory:
+For MySQL:
+```sh
+npx nexxt make:factory sites_factory
+```
+
+
+#### Run Seeders:
+For MySQL:
+```sh
+npx nexxt seed --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt seed --db=postgres
+```
+
+#### Run Specific Seeder File:
+For MySQL:
+```sh
+npx nexxt seed sites_seeder --db=mysql
+```
+For PostgreSQL:
+```sh
+npx nexxt seed sites_seeder --db=postgres
+```
+
+
+## License
+**Restricted Use License**
+
+Copyright (c) 2025 **Dohrnyx Services Private Limited**
+
+## Permissions
+You are granted a **limited, non-exclusive, non-transferable** right to use this software under the following conditions:
+
+- You may use this software **only for personal or internal projects**.
+- You **must** retain this copyright notice in any use of the software.
+
+## Restrictions
+You **may not**:
+
+1. Modify, alter, reverse engineer, or create derivative works based on this software.
+2. Distribute, publish, sublicense, share, or make the software available to any third party.
+3. Sell, rent, lease, or claim ownership of this software or any part of it.
+
+## Enforcement
+Any violation of these terms **immediately revokes** your right to use the software, and legal action may be taken against unauthorized use.
+
+## Disclaimer
+THIS SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THIS SOFTWARE.
+
+By using this software, you acknowledge and agree to these terms.
+
+---
+For more information, please contact **Dohrnyx** at [https://dohrnyx.com](https://dohrnyx.com).
+
+For more information about, how it works - **Dohrnyx Medium** at [Migration, Seeder and Factory Creator In Nodejs](https://medium.com/@dohrnyx.social/migration-seeder-and-factory-creator-in-nodejs-07669929023a).
+
